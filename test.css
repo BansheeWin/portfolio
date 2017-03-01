@@ -1,0 +1,37 @@
+#panier {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #00F;
+    margin-left: 1000px;
+    margin-top: 300px;
+}
+
+.produit {
+    width: 200px;
+    height: 200px;
+    background-color: #0FC;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#contenuProduit {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #0FC;
+}
+
+#move {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #FF0;
+    z-index: 90;
+}
+
+#vitrine {
+    width: 1000px;
+    height: 1000px;
+}
