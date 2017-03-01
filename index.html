@@ -14,7 +14,7 @@
 <body>
     <header class="container">
         <a href="index.html"><img src="img/logo.svg" alt="logo de mon portfolio" /> John Doe</a>
-        <nav> <a href="index.html"><i class="fa fa-home"></i> Accueil</a> <a href="#realisation"><i class="fa fa-folder-open"></i> Réalisations</a> <a href="#contact"><i class="fa fa-envelope"></i> Contact</a> </nav>
+        <nav> <a href="index.html" class="js-scrollTo"><i class="fa fa-home"></i> Accueil</a> <a href="#realisation" class="js-scrollTo"><i class="fa fa-folder-open"></i> Réalisations</a> <a href="#contact" class="js-scrollTo"><i class="fa fa-envelope"></i> Contact</a> </nav>
     </header>
     <main>
         <section id="cover">
@@ -90,6 +90,19 @@
         <p> Cet exercice de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a href="https://3wa.fr/propriete-materiel-pedagogique">pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International.</a>
             <br> Les autorisation au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="http://www.justine-muller.fr">Justine Muller.</a> </p>
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-scrollTo').on('click', function () { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate({
+                    scrollTop: $(page).offset().top
+                }, speed); // Go
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>

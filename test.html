@@ -1,0 +1,22 @@
+<div style="position:fixed; text-align:left; height:100%; width:100%; 
+padding-top:20px;"> <a style="
+text-decoration:none; height:100%; width:100%; padding-left:50px;
+font-family:'Open Sans';font-size:14px;font-weight:bold; color:#000" onmouseover="this.style.color='#FFF';" onmouseout="this.style.color='#000';" href="#anchor-accueil">Titre onglet 1</a> <a style="text-decoration:none; height:100%; width:100%; padding-left:15px;
+font-family:'Open Sans';font-size:14px; font-weight:bold; color:#000" onmouseover="this.style.color='#FFF';" onmouseout="this.style.color='#000';" href="#anchor-apropos">Titre onglet 2</a> <a style="text-decoration:none; height:100%; width:100%; padding-left:15px;
+font-family:'0pen Sans';font-size:14px; font-weight:bold; color:#000" onmouseover="this.style.color='#FFF';" onmouseout="this.style.color='#000';" href="#anchor-services">Titre onglet 3</a> <a style="text-decoration:none; height:100%; width:100%; padding-left:15px;
+font-family:'0pen Sans';font-size:14px; font-weight:bold; color:#000" onmouseover="this.style.color='#FFF';" onmouseout="this.style.color='#000';" href="#anchor-portfolio">Titre onglet 4</a> <a style="text-decoration:none; height:100%; width:100%; padding-left:15px;
+font-family:'Open Sans';font-size:14px; font-weight:bold; color:#000" onmouseover="this.style.color='#FFF';" onmouseout="this.style.color='#000';" href="#anchor-contact">Titre onglet 5</a> </div>
+<script>
+    $(document).ready(function () {
+        $('a[href*="anchor-"]').click(function () { // Au clic sur un élément
+            var page = $(this).attr('href'); // Page cible
+            var ancre = page.replace('#', '');
+            var coordonnees = $('a[name="' + ancre + '"]').offset().top;
+            var speed = 750; // Durée de l'animation (en ms)
+            $('html, body').animate({
+                scrollTop: coordonnees
+            }, speed); // Go
+            return false;
+        });
+    });
+</script>
